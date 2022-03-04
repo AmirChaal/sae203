@@ -1,7 +1,8 @@
 <header>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">INDUSTRIAE PRESUL</a>
+    <img class="cog" src="images/cog.png" alt="">
+    <a class="navbar-brand mytitle" href="index.php">INDUSTRIAE PRESUL</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

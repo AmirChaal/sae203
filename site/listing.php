@@ -20,20 +20,20 @@ $resultat = $mabd->query($req);
             foreach ($resultat as $value) {
                 echo    '<div class="mycontainer">
                             <div class="mycard"> <!-- Card -->
-                            <div class="vignette">
-                                <img src="images/'.$value['prod_photo'].'">
-                                <div class="labelB">
-                                    <span>'.$value['prod_note'].'/500</span>
-                                    <span>'.$value['prod_classement'].'</span> 
+                                <div class="vignette">
+                                    <img src="images/'.$value['prod_photo'].'">
+                                    <div class="labelB">
+                                        <span>Noté '.$value['prod_note'].'/500</span>
+                                        <span>Classé '.$value['prod_classement'].'ème</span> 
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="labelD">
-                                <p>'.$value['prod_nom'].'</p>
-                                <p>'.$value['prod_annee'].'</p>
-                                <p>'.$value['aut_nom'].'</p>
-                                <p>né.e ou formé en '.$value['aut_annee'].', '.$value['aut_lieu'].'</p>
-                                <p>'.$value['prod_inf'].'</p>
-                            </div>
+                                <div class="labelD">
+                                    <p>'.$value['prod_nom'].'</p>
+                                    <p>'.$value['prod_annee'].'</p>
+                                    <p>'.$value['aut_nom'].'</p>
+                                    <p>né.e ou formé en '.$value['aut_annee'].', '.$value['aut_lieu'].'</p>
+                                    <p>'.$value['prod_inf'].'</p>
+                                </div>
                             </div>
                         </div>';
             }
