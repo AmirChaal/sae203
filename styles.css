@@ -233,6 +233,10 @@ button:active{
     font-size: 22px;
     margin: 10px auto 40px auto;
     color: white;
+    padding: 20px;
+    background-color: #00000091;
+    box-shadow: 0px 0px 20px -2px #0000008c;
+    border-radius: 8px;
 }
 @media screen and (max-width: 840px) {
     .mycontainerF{
