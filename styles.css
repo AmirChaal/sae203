@@ -228,12 +228,11 @@ button:active{
     background-color: #000000 !important;
 }
 .reponse{
+    width: 900px;
     display: block;
     font-size: 22px;
-    margin-top: 10px;
-    margin-bottom: 40px;
+    margin: 10px auto 40px auto;
     color: white;
-    text-align: justify;
 }
 @media screen and (max-width: 840px) {
     .mycontainerF{
