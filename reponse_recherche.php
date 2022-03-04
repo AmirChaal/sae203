@@ -23,8 +23,7 @@ require 'header.php';
 		header('Location: index.php');
 	}
 
-	echo htmlentities($_POST['anneemin']).' et '.htmlentities($_POST['anneemax']);
-	echo htmlentities($_POST['auteur'])
+	echo 'Vous cherchez les productions sorties entre '.htmlentities($_POST['anneemin']).' et '.htmlentities($_POST['anneemax']).' et produites par '.htmlentities($_POST['auteur']).'.';
 
 	
 
