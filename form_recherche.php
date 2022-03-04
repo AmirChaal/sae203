@@ -10,7 +10,7 @@ require 'header.php';
 		<input class="textarea" type="number" name="anneemin" class="search" placeholder="Annee min" data-parsley-type="number">
 		<input class="textarea" type="number" name="anneemax" class="search" placeholder="Annee max" data-parsley-type="number">
 		
-		<input class="textarea" type="text" name="auteur" list="auteurs" class="search" placeholder="Auteur" data-parsley-type="alphanum">
+		<input class="textarea" type="text" name="auteur" list="auteurs" class="search" placeholder="Auteur">
 		<datalist id="auteurs">
 			<option value="Lingua ignota">
 			<option value="Have a Nice Life">
