@@ -1,5 +1,5 @@
 <header>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <img class="cog" src="images/cog.png" alt="">
     <a class="navbar-brand mytitle" href="index.php">INDUSTRIAE PRESUL</a>
