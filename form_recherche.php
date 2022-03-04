@@ -7,7 +7,7 @@ require 'header.php';
 
 <div class="mycontainerF">
 	<form  action="reponse_recherche.php" method="POST" data-parsley-validate>
-		<input class="textarea" type="number" name="anneemin" class="search" placeholder="Entre l'année.." data-parsley-type="number">
+		<input class="textarea" type="number" name="anneemin" class="search" placeholder="Publiées après l'année.." data-parsley-type="number">
 		<input class="textarea" type="number" name="anneemax" class="search" placeholder="Avant l'année.." data-parsley-type="number">
 		<input class="textarea" type="text" name="auteur" list="auteurs" class="search" placeholder="Auteur">
 		<datalist id="auteurs">
