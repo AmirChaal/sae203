@@ -11,7 +11,6 @@
         <a class="nav-link <?php if ($current=='accueil') {echo 'active';} else {echo '';}?>" aria-current="page" href="index.php">Accueil</a>
         <a class="nav-link <?php switch ($current) {case 'accueil': echo ''; break; case 'listing': echo 'active'; break; break;}?>" href="listing.php">Listing</a>
         <a class="nav-link <?php switch ($current) {case 'accueil': echo ''; break; case 'listing': echo ''; break; case 'recherche': echo 'active'; break;}?>" href="form_recherche.php">Recherche</a>
-        
       </div>
     </div>
   </div>

@@ -23,7 +23,8 @@ require 'header.php';
 		header('Location: index.php');
 	}
 
-	echo 'Vous cherchez les productions sorties entre '.htmlentities($_POST['anneemin']).' et '.htmlentities($_POST['anneemax']).' et produites par '.htmlentities($_POST['auteur']).'.';
+	echo '<div class="reponse">
+			<p>Vous cherchez les productions sorties entre '.htmlentities($_POST['anneemin']).' et '.htmlentities($_POST['anneemax']).' et produites par '.htmlentities($_POST['auteur']).'.</p>';
 
 	
 
