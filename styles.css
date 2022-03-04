@@ -227,7 +227,14 @@ form {
 button:active{
     background-color: #000000 !important;
 }
-
+.reponse{
+    display: block;
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    color: white;
+    text-align: justify;
+}
 @media screen and (max-width: 840px) {
     .mycontainerF{
         width: 290px;
