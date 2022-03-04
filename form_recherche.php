@@ -8,10 +8,10 @@ require 'header.php';
 <div class="mycontainerF">
 	<form  action="reponse_recherche.php" method="POST" data-parsley-validate>
 		<label for="anneemin">Productions sorties avant...</label>
-		<input class="textarea" type="number" name="anneemin" class="search" placeholder="Annee min" data-parsley-type="number">
 		<label for="anneemax">et après...</label>
-		<input class="textarea" type="number" name="anneemax" class="search" placeholder="Annee max" data-parsley-type="number">
 		<label for="auteur">et par...</label>
+		<input class="textarea" type="number" name="anneemin" class="search" placeholder="Annee min" data-parsley-type="number">
+		<input class="textarea" type="number" name="anneemax" class="search" placeholder="Annee max" data-parsley-type="number">
 		<input class="textarea" type="text" name="auteur" list="auteurs" class="search" placeholder="Auteur">
 		<datalist id="auteurs">
 			<option value="Lingua ignota">
