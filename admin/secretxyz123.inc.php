@@ -1,4 +1,4 @@
 <?php
-  define('USER', 'sae203');
-  define('MDP', 'Peptodox-44');
+  define('LUTILISATEUR', 'sae203');
+  define('LEMOTDEPASSE', 'Peptodox-44');
 ?>

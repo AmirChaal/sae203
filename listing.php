@@ -1,23 +1,20 @@
 <?php
-	$title="Listing";
-	$current = 'listing';
+$title="Listing";
+$current = 'listing';
+
 require 'debut_html.php';
 require 'header.php';
-require 'admin/secretxyz123.inc.php';
-?>
 
-<?php
-$mabd = new PDO('mysql:host=localhost;dbname=sae203;charset=UTF8;', USER, MDP);
-$mabd->query('SET NAMES utf8;');
-$req = "SELECT * FROM productions INNER JOIN auteurs ON productions._aut_id = auteurs.aut_id";
-$resultat = $mabd->query($req);
-
+connexionBD();
 ?>
 
 <div class="listing">
     <div class="mycards">
 
         <?php
+            $req = "SELECT * FROM productions INNER JOIN auteurs ON productions._aut_id = auteurs.aut_id";
+            $resultat = $mabd->query($req);
+
             foreach ($resultat as $value) {
                 echo    '<div class="mycontainer">
                             <div class="mycard"> <!-- Card -->
@@ -44,6 +41,8 @@ $resultat = $mabd->query($req);
 </div>
 
 <?php
+deconnexionBD();
+
 require 'footer.php';
 require 'fin_html.php';
 ?>
