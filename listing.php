@@ -13,14 +13,13 @@ require 'lib_crud.inc.php';
         <?php
             $co = connexionBD();
             afficherCatalogue($co)
+            deconnexionBD($co);
         ?>
 
     </div>
 </div>
 
 <?php
-deconnexionBD($co);
-
 require 'footer.php';
 require 'fin_html.php';
 ?>
