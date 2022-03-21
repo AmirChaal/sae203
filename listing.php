@@ -5,13 +5,14 @@ $current = 'listing';
 require 'debut_html.php';
 require 'header.php';
 require 'lib_crud.inc.php';
-connexionBD();
 ?>
 
 <div class="listing">
     <div class="mycards">
 
         <?php
+            connexionBD();
+
             $req = "SELECT * FROM productions INNER JOIN auteurs ON productions._aut_id = auteurs.aut_id";
             $resultat = $mabd->query($req);
 
@@ -41,7 +42,7 @@ connexionBD();
 </div>
 
 <?php
-
+deconnexionBD();
 
 require 'footer.php';
 require 'fin_html.php';
