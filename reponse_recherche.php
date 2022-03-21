@@ -21,7 +21,7 @@ require 'header.php';
 
 		$mabd = new PDO('mysql:host=localhost;dbname=sae203;charset=UTF8;', 'sae203', 'Peptodox-44');
 		$mabd->query('SET NAMES utf8;');
-		$req = 'SELECT * FROM productions INNER JOIN auteurs ON productions._aut_id = auteurs.aut_id WHERE prod_annee < '.$_POST['anneemax'].' AND prod_annee > '.$_POST['anneemin'].' AND aut_nom = '.$_POST['auteur'];
+		$req = 'SELECT * FROM productions INNER JOIN auteurs ON productions._aut_id = auteurs.aut_id WHERE prod_annee < '.$_POST['anneemax'].' AND prod_annee > '.$_POST['anneemin'].' AND aut_nom = "'.$_POST['auteur'].'"';
 		$resultat = $mabd->query($req);
 		?>
 		
