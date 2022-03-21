@@ -3,7 +3,7 @@
 	$current = 'listing';
 require 'debut_html.php';
 require 'header.php';
-require 'admin/secretxyz123.inc';
+require 'admin/secretxyz123.inc.php';
 ?>
 
 <?php
