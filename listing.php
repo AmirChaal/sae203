@@ -4,7 +4,7 @@ $current = 'listing';
 
 require 'debut_html.php';
 require 'header.php';
-
+require 'lib_crud.inc.php';
 connexionBD();
 ?>
 
