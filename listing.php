@@ -3,10 +3,11 @@
 	$current = 'listing';
 require 'debut_html.php';
 require 'header.php';
+require 'admin/secretxyz123.inc';
 ?>
 
 <?php
-$mabd = new PDO('mysql:host=localhost;dbname=sae203;charset=UTF8;', 'sae203', 'Peptodox-44');
+$mabd = new PDO('mysql:host=localhost;dbname=sae203;charset=UTF8;', USER, MDP);
 $mabd->query('SET NAMES utf8;');
 $req = "SELECT * FROM productions INNER JOIN auteurs ON productions._aut_id = auteurs.aut_id";
 $resultat = $mabd->query($req);

@@ -3,6 +3,7 @@
 	$current = 'recherche';
 require 'debut_html.php';
 require 'header.php';
+require 'admin/secretxyz123.inc';
 ?>
 
 <?php
@@ -19,7 +20,7 @@ require 'header.php';
 			<p>Vous cherchez les productions sorties entre '.htmlentities($_POST['anneemin']).' et '.htmlentities($_POST['anneemax']).' et produites par '.htmlentities($_POST['auteur']).'.</p>
 		</div>';
 
-		$mabd = new PDO('mysql:host=localhost;dbname=sae203;charset=UTF8;', 'sae203', 'Peptodox-44');
+		$mabd = new PDO('mysql:host=localhost;dbname=sae203;charset=UTF8;', USER, MDP);
 		$mabd->query('SET NAMES utf8;');
 		$req = 'SELECT * FROM productions INNER JOIN auteurs ON productions._aut_id = auteurs.aut_id WHERE prod_annee <= '.$_POST['anneemax'].' AND prod_annee >= '.$_POST['anneemin'].' AND aut_nom = "'.$_POST['auteur'].'"';
 		$resultat = $mabd->query($req);
@@ -27,7 +28,6 @@ require 'header.php';
 		
 		<div class="listing">
 			<div class="mycards">
-		
 				<?php
 					foreach ($resultat as $value) {
 						echo    '<div class="mycontainer">
