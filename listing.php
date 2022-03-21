@@ -11,8 +11,7 @@ require 'lib_crud.inc.php';
     <div class="mycards">
 
         <?php
-            connexionBD();
-            $mabd = new PDO('mysql:host=127.0.0.1;port=3306;dbname=sae203;charset=UTF8;', LUTILISATEUR, LEMOTDEPASSE);
+            $mabd = connexionBD();
             $req = "SELECT * FROM productions INNER JOIN auteurs ON productions._aut_id = auteurs.aut_id";
             $resultat = $mabd->query($req);
 

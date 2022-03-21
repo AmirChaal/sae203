@@ -16,3 +16,7 @@ function connexionBD(){
 function deconnexionBD(&$mabd) {
     $mabd=null;
 }
+
+
+
+
