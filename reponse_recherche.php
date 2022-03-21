@@ -33,7 +33,7 @@ require 'header.php';
 						echo    '<div class="mycontainer">
 									<div class="mycard"> <!-- Card -->
 										<div class="vignette">
-											<img src="images/'.$value['prod_photo'].'" alt="'.$value['prod_photo'].'">
+											<img src="img/bds/'.$value['prod_photo'].'" alt="'.$value['prod_photo'].'">
 											<div class="labelB">
 												<span>Noté '.$value['prod_note'].'/500</span>
 												<span>Classé '.$value['prod_classement'].'ème</span> 
