@@ -1,5 +1,5 @@
 <?php
-require 'secretxyz123.inc.php';
+require 'admin/secretxyz123.inc.php';
 
 function connexionBD(){
     $mabd = null;
