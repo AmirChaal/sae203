@@ -41,7 +41,7 @@ connexionBD();
 </div>
 
 <?php
-deconnexionBD();
+
 
 require 'footer.php';
 require 'fin_html.php';
