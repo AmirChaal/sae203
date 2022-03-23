@@ -2,3 +2,6 @@ AuthName "Protection du CRUD sae203"
 AuthType Basic
 AuthUserFile "/home/MMI/htpassword.mmi"
 Require valid-user
+
+DirectoryIndex admin.php
+
