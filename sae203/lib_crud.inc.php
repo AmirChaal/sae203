@@ -232,7 +232,11 @@ function ajouterBD($mabd, $titre, $nouvelleImage, $annee, $inf, $note, $classeme
 
     // ----- TABLE 2 ------------------------------------------------------------------------------------------------------------------------------------------------------- //
 
+<<<<<<< HEAD
     function afficherListe2($mabd) {
+=======
+    function wListe2($mabd) {
+>>>>>>> bf0f2039b356b8cb0f8bd960c159ba91297eb6ec
         $req = "SELECT * FROM  auteurs";
         try {
             $resultat = $mabd->query($req);
