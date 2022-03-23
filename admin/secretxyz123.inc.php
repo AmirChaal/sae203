@@ -1,4 +1,4 @@
 <?php
-define('LUTILISATEUR', 'root');
-define('LEMOTDEPASSE', 'root');
+define('LUTILISATEUR', 'sae203');
+define('LEMOTDEPASSE', 'Peptodox-44');
 ?>
