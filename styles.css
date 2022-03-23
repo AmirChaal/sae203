@@ -244,7 +244,20 @@ button:active{
     }
 }
 
-
+.reponse{
+    padding: 20px;
+    margin: 30px;
+    background-color: #00000091;
+    box-shadow: 0px 0px 20px -2px #0000008c;
+    border-radius: 8px;
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    width: auto;
+}
+.reponse p{
+    margin: 0px;
+}
 /* -- FOOTER ------------------------------------------------ */
 
 footer {
@@ -294,3 +307,4 @@ textarea.parsley-error {
 .parsley-errors-list.filled {
   opacity: 1;
 }
+

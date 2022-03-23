@@ -7,21 +7,19 @@ require 'header.php';
 
 <div class="mycontainerF">
 	<form  action="reponse_recherche.php" method="POST" data-parsley-validate>
-		<input class="textarea" type="number" name="anneemin" class="search" placeholder="Publiées après l'année.." data-parsley-type="number">
-		<input class="textarea" type="number" name="anneemax" class="search" placeholder="Avant l'année.." data-parsley-type="number">
-		<input class="textarea" type="text" name="auteur" list="auteurs" class="search" placeholder="Auteur">
+		<input class="textarea" type="number" name="anneemin" class="search" placeholder="Publiées après l'année.." data-parsley-type="number" required>
+		<input class="textarea" type="number" name="anneemax" class="search" placeholder="Avant l'année.." data-parsley-type="number" required>
+		<input type="text" class="textarea" name="auteur" list="auteurs" placeholder="Auteur" autocomplete="off" required/>
 		<datalist id="auteurs">
-			<option value="Lingua ignota">
-			<option value="Have a Nice Life">
-			<option value="Coil">
-			<option value="Daughters">
-			<option value="Nine Inch Nails">
-			<option value="Massive Attack">
-			<option value="Swans">
-			<option value="Death in June">
-			<option value="Death Grips">
-			<option value="Front Line Assembly">
+		<?php
+			require 'lib_crud.inc.php';
+			$co=connexionBD();
+			genererDatalistAuteurs($co);
+			deconnexionBD($co);
+		?>
 		</datalist>
+
+
 		<div>
 			<input id="button" type="submit" name="submit" class="submit" value="Chercher">
 		</div>

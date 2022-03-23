@@ -7,7 +7,7 @@ require 'header.php';
 
 
 <div class="intro">
-	<h1>SINDUSTRIAE PRESUL</h1>
+	<h1>INDUSTRIAE PRESUL</h1>
 	<p>La musique post-industrielle reprend l'esthétique brute, sombre et mécanique de la musique industrielle et y insuffle des influences plus accessibles telles que le rock, le metal ou encore le <a href="http://mmi21d04.h205.online">Folk</a>.</p>
 
 

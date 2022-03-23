@@ -3,7 +3,7 @@
 	$current = 'recherche';
 require 'debut_html.php';
 require 'header.php';
-require 'admin/secretxyz123.inc.php';
+require 'lib_crud.inc.php';
 ?>
 
 <?php
@@ -19,38 +19,15 @@ require 'admin/secretxyz123.inc.php';
 	echo '<div class="reponse">
 			<p>Vous cherchez les productions sorties entre '.htmlentities($_POST['anneemin']).' et '.htmlentities($_POST['anneemax']).' et produites par '.htmlentities($_POST['auteur']).'.</p>
 		</div>';
-
-		$mabd = new PDO('mysql:host=localhost;dbname=sae203;charset=UTF8;', USER, MDP);
-		$mabd->query('SET NAMES utf8;');
-		$req = 'SELECT * FROM productions INNER JOIN auteurs ON productions._aut_id = auteurs.aut_id WHERE prod_annee <= '.$_POST['anneemax'].' AND prod_annee >= '.$_POST['anneemin'].' AND aut_nom = "'.$_POST['auteur'].'"';
-		$resultat = $mabd->query($req);
-		?>
+?>
 		
 		<div class="listing">
 			<div class="mycards">
 				<?php
-					foreach ($resultat as $value) {
-						echo    '<div class="mycontainer">
-									<div class="mycard"> <!-- Card -->
-										<div class="vignette">
-											<img src="img/bds/'.$value['prod_photo'].'" alt="'.$value['prod_photo'].'">
-											<div class="labelB">
-												<span>Noté '.$value['prod_note'].'/500</span>
-												<span>Classé '.$value['prod_classement'].'ème</span> 
-											</div>
-										</div>
-										<div class="labelD">
-											<p>'.$value['prod_nom'].'</p>
-											<p>'.$value['prod_annee'].'</p>
-											<p>'.$value['aut_nom'].'</p>
-											<p>né.e ou formé en '.$value['aut_annee'].', '.$value['aut_lieu'].'</p>
-											<p>'.$value['prod_inf'].'</p>
-										</div>
-									</div>
-								</div>';
-					}
+					$co=connexionBD();
+					afficherResultatRecherche($co);
+					deconnexionBD($co);
 				?>
-		
 			</div>
 		</div>
 
