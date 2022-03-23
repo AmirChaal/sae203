@@ -5,13 +5,13 @@ Require valid-user
 DirectoryIndex admin.php
 SetEnv PHP_VALUE "display_errors = Off"
 RewriteEngine On
-RewriteRule albums /var/www/sae203/admin/table1_gestion.php
+RewriteRule productions /var/www/sae203/admin/table1_gestion.php
 RewriteRule supprimer /var/www/sae203/table1_delete.php
 RewriteRule nouveau /var/www/sae203/admin/table1_new_form.php
 RewriteRule validation /var/www/sae203/admin/table1_new_valide.php
 RewriteRule modifier /var/www/sae203/admin/table1_update_form.php
 RewriteRule validation /var/www/sae203/admin/table1_update_valide.php
-RewriteRule albums /var/www/sae203/admin/table2_gestion.php
+RewriteRule productions /var/www/sae203/admin/table2_gestion.php
 RewriteRule supprimer /var/www/sae203/table2_delete.php
 RewriteRule nouveau /var/www/sae203/admin/table2_new_form.php
 RewriteRule validation /var/www/sae203/admin/table2_new_valide.php
