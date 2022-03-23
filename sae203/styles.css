@@ -1,0 +1,310 @@
+* {box-sizing: border-box;}
+
+body {
+    position: relative;
+    background: url(img/fond.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 2vh !important;
+    color: white;
+}
+.mytitle{
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 2px;
+}
+.cog{
+    width: 26px;
+    margin-right: 4px;
+}
+@media all and (max-width: 991px) {
+    .cog{
+        display: none;
+    }
+}
+/* Page ACCUEIL ------------------------------------------------ */
+.intro h1{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 71px;
+    text-align: center;
+    color: white;
+}
+.intro p{
+    display: block;
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    color: white;
+    text-align: justify;
+}
+
+a{
+    font-weight: bolder;
+    color: white !important;
+    text-decoration: none;
+}
+
+/* Page ACCUEIL - propre aux ordis ------ */
+
+@media screen and (min-width: 850px) {
+    .intro{
+        width: 700px;
+        top: 138px;
+        position: absolute;
+        left: 10%;
+        margin-bottom: 138px;
+    }
+    iframe{
+        display: block;
+        justify-content: center;
+        margin: 0px auto;
+    }
+}
+/* Page ACCUEIL - propre aux telephones ------ */
+
+@media screen and (max-width: 850px) {
+    .intro{
+        display: block;
+        width: 80%;
+        top: 138px;
+        position: relative;
+        margin: 0px auto 0px auto;
+        height: 110vh;
+    }
+    iframe{
+        display: block;
+        justify-content: center;
+        margin: 0px auto;
+        width : 420;
+        height : 236;
+    }
+}
+@media screen and (max-width: 590px) {
+    iframe{
+        width : 210px;
+        height : 118px;
+    }
+    .intro{
+        height: 110vh;
+    }
+}
+
+/* -- Page LISTING ------------------------------------------------ */
+.mycontainer{
+    padding: 20px;
+    margin: 30px;
+    background-color: #00000091;
+    box-shadow: 0px 0px 20px -2px #0000008c;
+    border-radius: 8px;
+}
+.mycards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 40px;
+}
+.mycard{
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    height: 330px;
+}
+.mycard img{
+    width: 300px;
+    height: 300px;
+}
+.labelD {
+    position: relative;
+    padding: 0px 0px 0px 22px;
+    width: 300px;
+    height: 330px;
+    display: inline;
+    text-align: left;
+    text-justify: auto;
+}
+.labelD :nth-child(1){
+    line-height: 36px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 40px;
+    margin: 0px;
+}
+.labelD :nth-child(2){
+    position: relative;
+    top: -7px;
+}
+
+.labelD :nth-child(3){
+    font-weight: bold;
+}
+
+.labelD :nth-child(4){
+    font-size: 15px;
+    position: relative;
+    top: -17px;
+}
+
+.labelD :nth-child(5){
+    font-size: 15px;
+    position: absolute;
+    bottom: 0px;
+    margin: 0px;
+}
+
+.vignette{
+    height: 330px;
+    position: relative;
+}
+
+.labelB{
+    line-height: 35px;
+    position: absolute;
+    bottom: 0px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    width: 300px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 15px 0px 15px;
+}
+span {
+    font-size: 15px;
+}
+
+@media screen and (max-width: 700px) {
+    .labelD{
+        padding: 23px 0px 0px 0px;
+        height: auto;
+    }
+    .mycard{
+        height: auto;
+        width: 300px;
+        flex-direction: column !important;
+    }
+    .labelD :nth-child(5){
+        position: relative;
+        margin: 15px 0px 0px 0px;
+    }
+}
+
+
+/* -- FORM ------------------------------------------------ */
+.mycontainerF{
+    width: 790px;
+    display: block;
+    margin: 180px auto 0px auto;
+    padding: 20px;
+    background-color: #00000091;
+    box-shadow: 0px 0px 20px -2px #0000008c;
+    border-radius: 8px;
+}
+form {
+    width: 770px;
+}
+.textarea{
+    font-weight: bold;
+    width: 250px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+#button{
+    border: solid;
+    border-width: 1px;
+    border-color: #000000;
+    display: block;
+    margin: 0px auto 0px auto;
+    border-radius: 8px;
+    background-color: #383c44;
+    width: 590px;
+    height: 50px;
+    outline: #383c44;
+    color: white;
+    font-weight: bold;
+}
+button:active{
+    background-color: #000000 !important;
+}
+
+@media screen and (max-width: 840px) {
+    .mycontainerF{
+        width: 290px;
+    }
+    form {
+        margin: 0px;
+        width: 250px;
+    }
+    .textarea{
+        display: block !important;
+    }
+    #button{
+        width: 250px;
+    }
+}
+
+.reponse{
+    padding: 20px;
+    margin: 30px;
+    background-color: #00000091;
+    box-shadow: 0px 0px 20px -2px #0000008c;
+    border-radius: 8px;
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    width: auto;
+}
+.reponse p{
+    margin: 0px;
+}
+/* -- FOOTER ------------------------------------------------ */
+
+footer {
+    color: white;
+    max-height: 5vh;
+    padding: 1vh;
+    background-color: #383c44;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0;
+}
+
+/*  PARSLEY  */
+
+input.parsley-success,
+select.parsley-success,
+textarea.parsley-success {
+  color: #468847;
+  background-color: #DFF0D8;
+  border: 1px solid #D6E9C6;
+}
+
+input.parsley-error,
+select.parsley-error,
+textarea.parsley-error {
+  color: #B94A48;
+  background-color: #F2DEDE;
+  border: 1px solid #EED3D7;
+}
+
+.parsley-errors-list {
+  margin: 2px 0 3px;
+  padding: 0;
+  list-style-type: none;
+  font-size: 0.9em;
+  line-height: 0.9em;
+  opacity: 0;
+  color: #B94A48;
+
+  transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -webkit-transition: all .3s ease-in;
+}
+
+.parsley-errors-list.filled {
+  opacity: 1;
+}
+
