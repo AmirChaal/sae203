@@ -20,6 +20,6 @@ require 'header_admin.php';
 	    ?>
 
 <?php
-require 'footer.php';
-require 'fin_html.php'
+require '../footer.php';
+require '../fin_html.php'
 ?>
