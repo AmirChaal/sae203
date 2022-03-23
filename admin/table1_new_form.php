@@ -17,7 +17,7 @@
 	        Photo : <input type="file" name="photo" required /><br />
 	        Auteur : <select name="auteur" required>
 	        <?php
-	            require fdgfd'../lib_crud.inc.php';
+	            require '../lib_crud.inc.php';
 	            $co=connexionBD();
 	            afficherAuteursOptions($co);
 	            deconnexionBD($co);
