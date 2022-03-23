@@ -1,4 +1,0 @@
-#AuthName "La partie ADMIN est sous protection."
-#AuthType Basic
-#AuthUserFile "/var/www/passwordssae203"
-#Require valid-user
