@@ -1,15 +1,40 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>SAE203</title>
-	</head>
-	<body style="font-family:sans-serif;">
-	    <a href="../index.php">Accueil</a> | <a href="admin.php">Gestion</a>
+<?php
+$title="Admin";
+$current = 'recherche';
+require 'debut_html_admin.php';
+require 'header_admin.php';
+?>
+
+<div class="admin">
 	    <hr />
 	    <h1>Ajouter une bande dessinée</h1>
 	    <hr />
 	    <?php
 	        require '../lib_crud.inc.php';
+
+			if (filter_var($_POST['annee'] , FILTER_VALIDATE_INT) == false) {
+				header('Location: ../index.php'); exit;}
+			if ((strpos($_POST['annee'] , '<') !== false) || (strpos($_POST['annee'] , '>') !== false)) {
+				header('Location: ../index.php'); exit;}
+
+			if ((strpos($_POST['titre'] , '<') !== false) || (strpos($_POST['titre'] , '>') !== false)) {
+				header('Location: ../index.php'); exit;}
+
+			if ((strpos($_POST['influences'] , '<') !== false) || (strpos($_POST['influences'] , '>') !== false)) {
+				header('Location: ../index.php'); exit;}
+			
+			if (filter_var($_POST['note'] , FILTER_VALIDATE_INT) == false) {
+				header('Location: ../index.php'); exit;}
+			if ((strpos($_POST['note'] , '<') !== false) || (strpos($_POST['note'] , '>') !== false)) {
+				header('Location: ../index.php'); exit;}
+
+			if (filter_var($_POST['classement'] , FILTER_VALIDATE_INT) == false) {
+				header('Location: ../index.php'); exit;}
+			if ((strpos($_POST['classement'] , '<') !== false) || (strpos($_POST['classement'] , '>') !== false)) {
+				header('Location: ../index.php'); exit;}
+
+			if ((strpos($_POST['auteur'] , '<') !== false) || (strpos($_POST['auteur'] , '>') !== false)) {
+				header('Location: ../index.php'); exit;}
 	
 	        $titre=$_POST['titre'];
 	        $annee=$_POST['annee'];
@@ -45,5 +70,10 @@
 	        ajouterBD($co, $titre, $nouvelleImage, $annee, $inf, $note, $classement, $auteur);
 	        deconnexionBD($co);
 	    ?>
-	</body>
-</html>
+</div>
+
+	    
+<?php
+require '../footer.php';
+require '../fin_html.php'
+?>

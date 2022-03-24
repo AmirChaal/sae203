@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>SAE203</title>
-</head>
-<body style="font-family:sans-serif;">
-    <a href="../index.php">Accueil</a> | <a href="table1_gestion.php">Gestion</a>
+<?php
+$title="Admin";
+$current = 'recherche';
+require 'debut_html_admin.php';
+require 'header_admin.php';
+?>
+
+<div class="admin">
 	<hr>
     <h1>Modifier une bande dessinée</h1>
     <hr />
@@ -18,13 +19,13 @@
     ?>
     <form action="table1_update_valide.php" method="POST" enctype="multipart/form-data" >
         <input type="hidden" name="num" value="<?= $id; ?>" />
-        Titre : <input type="text" name="titre" value="<?= $album['prod_nom']; ?>" required /><br />
-        Année : <input type="number" name="annee" min="-5000" max="3000" value="<?= $album['prod_annee']; ?>" required /><br />
-        Influences : <textarea type="text" name="influences" required><?= $album['prod_inf']; ?></textarea><br />
-        Note (sur 500) : <input type="number" name="note" min="0.00" max="10000.00" step="1" value="<?= $album['prod_note']; ?>" required /><br />
-        Classement : <input name="classement" value="<?= $album['prod_classement']; ?>" required /><br />
-        Photo : <input type="file" name="photo" required /><br />
-        Auteur : <select name="auteur" required>
+        Titre<input type="text" name="titre" value="<?= $album['prod_nom']; ?>" required /><br />
+        Année<input type="number" name="annee" min="-5000" max="3000" value="<?= $album['prod_annee']; ?>" required /><br />
+        Influences<textarea type="text" name="influences" required><?= $album['prod_inf']; ?></textarea><br />
+        Note (sur 500)<input type="number" name="note" min="0.00" max="10000.00" step="1" value="<?= $album['prod_note']; ?>" required /><br />
+        Classement<input type="number" name="classement" value="<?= $album['prod_classement']; ?>" required /><br />
+        Photo<input type="file" name="photo" required /><br />
+        Auteur<select name="auteur" required>
         <?php
             $co=connexionBD();
             afficherAuteursOptionsSelectionne($co, $album['_aut_id']);
@@ -33,5 +34,10 @@
         </select><br />
         <input type="submit" value="Modifier" />
     </form>
-</body>
-</html>
+</div>
+
+
+<?php
+require '../footer.php';
+require '../fin_html.php'
+?>

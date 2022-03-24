@@ -1,11 +1,10 @@
 <?php
-$title="Recherche";
+$title="Admin";
 $current = 'recherche';
 require 'debut_html_admin.php';
 require 'header_admin.php';
 ?>
-
-	    <a href="../index.php">Accueil</a> | <a href="table1_gestion.php">Gestion</a>
+    <div class="admin">
 	    <hr />
 	    <h1>Supprimer une bande dessinée</h1>
 	    <hr />
@@ -18,6 +17,8 @@ require 'header_admin.php';
 	        effaceBD($co, $id);
 	        deconnexionBD($co);
 	    ?>
+	</div>
+
 
 <?php
 require '../footer.php';

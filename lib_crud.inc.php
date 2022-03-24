@@ -160,7 +160,6 @@ function afficherResultatRecherche($mabd) {
 function ajouterBD($mabd, $titre, $nouvelleImage, $annee, $inf, $note, $classement, $auteur)
     {
         $req = 'INSERT INTO productions (prod_nom, prod_photo, prod_annee, prod_inf, prod_note, prod_classement, _aut_id) VALUES ("'.$titre.'","'.$nouvelleImage.'",'.$annee.',"'.$inf.'",'.$note.','.$classement.',"'.$auteur.'")';
-        echo '<p>' . $req . '</p>' . "\n";
         try {
             $resultat = $mabd->query($req);
         } catch (PDOException $e) {
@@ -169,7 +168,7 @@ function ajouterBD($mabd, $titre, $nouvelleImage, $annee, $inf, $note, $classeme
             die();
         }
         if ($resultat->rowCount() == 1) {
-            echo '<p>La bande dessinée ' . $titre . ' a été ajoutée au catalogue.</p>' . "\n";
+            echo '<p>La production ' . $titre . ' a été ajoutée au catalogue.</p>' . "\n";
         } else {
             echo '<p>Erreur lors de l\'ajout.</p>' . "\n";
             die();
@@ -178,7 +177,6 @@ function ajouterBD($mabd, $titre, $nouvelleImage, $annee, $inf, $note, $classeme
 
     function effaceBD($mabd, $id) {
         $req = 'DELETE FROM productions WHERE prod_id = '.$_GET['num'].';';
-        echo '<p>'.$req.'</p>'."\n";
         try{
             $resultat = $mabd->query($req);
         } catch (PDOException $e) {
@@ -187,7 +185,7 @@ function ajouterBD($mabd, $titre, $nouvelleImage, $annee, $inf, $note, $classeme
             die();
         }
         if ($resultat->rowCount()==1) {
-            echo '<p>La bande dessinée '.$id.' a été supprimée du catalogue.</p>'."\n";
+            echo '<p>La production '.$id.' a été supprimée du catalogue.</p>'."\n";
         } else {
             echo '<p>Erreur lors de la suppression.</p>'."\n";
             die();
@@ -196,7 +194,6 @@ function ajouterBD($mabd, $titre, $nouvelleImage, $annee, $inf, $note, $classeme
 
     function getBD($mabd, $idAlbum) {
         $req = 'SELECT * FROM productions WHERE prod_id='.$idAlbum;
-        echo '<p>GetBD() : '.$req.'</p>'."\n";
         try {
             $resultat = $mabd->query($req);
         } catch (PDOException $e) {
@@ -214,7 +211,6 @@ function ajouterBD($mabd, $titre, $nouvelleImage, $annee, $inf, $note, $classeme
         $req = 'UPDATE productions
                 SET prod_nom = "'.$titre.'", prod_annee = '.$annee.', prod_inf = "'.$inf.'", prod_photo = "'.$nouvelleImage.'", prod_inf = "'.$inf.'", prod_note = '.$note.', prod_classement = '.$classement.', _aut_id = '.$auteur.'
                 WHERE prod_id='.$id;
-        echo '<p>' . $req . '</p>' . "\n";
         try {
             $resultat = $mabd->query($req);
         } catch (PDOException $e) {
@@ -261,7 +257,6 @@ function ajouterBD($mabd, $titre, $nouvelleImage, $annee, $inf, $note, $classeme
     function ajouterBD2($mabd, $nom, $annee, $lieu)
         {
             $req = 'INSERT INTO auteurs (aut_nom, aut_annee, aut_lieu) VALUES ("'.$nom.'",'.$annee.',"'.$lieu.'")';
-            echo '<p>' . $req . '</p>' . "\n";
             try {
                 $resultat = $mabd->query($req);
             } catch (PDOException $e) {
@@ -279,7 +274,6 @@ function ajouterBD($mabd, $titre, $nouvelleImage, $annee, $inf, $note, $classeme
     
         function effaceBD2($mabd, $id) {
             $req = 'DELETE FROM auteurs WHERE aut_id = '.$_GET['num'].';';
-            echo '<p>'.$req.'</p>'."\n";
             try{
                 $resultat = $mabd->query($req);
             } catch (PDOException $e) {
@@ -288,7 +282,7 @@ function ajouterBD($mabd, $titre, $nouvelleImage, $annee, $inf, $note, $classeme
                 die();
             }
             if ($resultat->rowCount()==1) {
-                echo '<p>La bande dessinée '.$id.' a été supprimée du catalogue.</p>'."\n";
+                echo '<p>L\'auteur '.$id.' a été supprimée du catalogue.</p>'."\n";
             } else {
                 echo '<p>Erreur lors de la suppression.</p>'."\n";
                 die();
@@ -297,7 +291,6 @@ function ajouterBD($mabd, $titre, $nouvelleImage, $annee, $inf, $note, $classeme
     
         function getBD2($mabd, $idAut) {
             $req = 'SELECT * FROM auteurs WHERE aut_id='.$idAut;
-            echo '<p>GetBD2() : '.$req.'</p>'."\n";
             try {
                 $resultat = $mabd->query($req);
             } catch (PDOException $e) {
@@ -315,7 +308,6 @@ function ajouterBD($mabd, $titre, $nouvelleImage, $annee, $inf, $note, $classeme
         $req = 'UPDATE auteurs
                 SET aut_nom = "'.$nom.'", aut_annee = '.$annee.', aut_lieu = "'.$lieu.'"
                 WHERE aut_id='.$id;
-        echo '<p>' . $req . '</p>' . "\n";
         try {
             $resultat = $mabd->query($req);
         } catch (PDOException $e) {
@@ -324,7 +316,7 @@ function ajouterBD($mabd, $titre, $nouvelleImage, $annee, $inf, $note, $classeme
             die();
         }
         if ($resultat->rowCount() == 1) {
-            echo '<p>La production ' . $nom . ' a été modifiée.</p>' . "\n";
+            echo '<p>L\'auteur ' . $nom . ' a été modifiée.</p>' . "\n";
         } else {
             echo '<p>Erreur lors de la modification.</p>' . "\n";
             die();

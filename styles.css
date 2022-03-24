@@ -258,6 +258,53 @@ button:active{
 .reponse p{
     margin: 0px;
 }
+
+/* -- ADMIN ------------------------------------------------ */
+
+.admin{
+    color: white;
+}
+.admin h1{
+    text-align: center;
+}
+.admin img{
+    width: 200px;
+}
+hr{
+    border-color: white !important;
+}
+table{
+    color: white;
+    text-align: center;
+}
+.matable{
+    border-radius: 10px;
+}
+.admin td{
+    padding: 20px;
+    width: 200px;
+}
+.admin th{
+    padding: 20px;
+    background-color: #0000006c;
+}
+table{
+    margin: 0px auto;
+    background-color: #0000006c;
+}
+.admin textarea, .admin input, .admin select{
+    display: block;
+}
+.admin form{
+    margin: 0px auto 80px auto;
+    width: 400px;
+    background-color: #0000006c;
+    padding: 20px;
+    border-radius: 10px;
+}
+.submit{
+    margin: 20px 0px 0px 0px;
+}
 /* -- FOOTER ------------------------------------------------ */
 
 footer {

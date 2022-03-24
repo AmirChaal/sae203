@@ -1,16 +1,28 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>SAE203</title>
-	</head>
-	<body style="font-family:sans-serif;">
-	    <a href="../index.php">Accueil</a> | <a href="table1_gestion.php">Gestion</a>
+<?php
+$title="Admin";
+$current = 'recherche';
+require 'debut_html_admin.php';
+require 'header_admin.php';
+?>
+
+<div class="admin">
 	    <hr />
 	    <h1>Modifier une bande dessinée</h1>
 	    <hr />
 	    <?php
 	        require '../lib_crud.inc.php';
 	
+			if (filter_var($_POST['annee'] , FILTER_VALIDATE_INT) == false) {
+				header('Location: ../index.php'); exit;}
+			if ((strpos($_POST['annee'] , '<') !== false) || (strpos($_POST['annee'] , '>') !== false)) {
+				header('Location: ../index.php'); exit;}
+
+			if ((strpos($_POST['nom'] , '<') !== false) || (strpos($_POST['nom'] , '>') !== false)) {
+				header('Location: ../index.php'); exit;}
+
+			if ((strpos($_POST['lieu'] , '<') !== false) || (strpos($_POST['lieu'] , '>') !== false)) {
+				header('Location: ../index.php'); exit;}
+
 	        $id=$_POST['num'];
 	        $nom=$_POST['nom'];
 	        $annee=$_POST['annee'];
@@ -20,5 +32,11 @@
 	        modifierBD2($co, $id, $nom, $annee, $lieu);
 	        deconnexionBD($co);
 	    ?>
-	</body>
-</html>
+</div>
+
+	
+
+<?php
+require '../footer.php';
+require '../fin_html.php'
+?>

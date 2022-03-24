@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>SAE203</title>
-	</head>
-	<body style="font-family:sans-serif;">
-	    <a href="../index.php">Accueil</a> | <a href="table1_gestion.php">Gestion</a>
+<?php
+$title="Admin";
+$current = 'recherche';
+require 'debut_html_admin.php';
+require 'header_admin.php';
+?>
+    <div class="admin">
 	    <hr />
 	    <h1>Supprimer une bande dessinée</h1>
 	    <hr />
@@ -17,5 +17,11 @@
 	        effaceBD2($co, $id);
 	        deconnexionBD($co);
 	    ?>
-	</body>
-</html>
+	</div>
+
+
+
+<?php
+require '../footer.php';
+require '../fin_html.php'
+?>
