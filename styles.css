@@ -289,7 +289,7 @@ table{
     background-color: #0000006c;
 }
 table{
-    margin: 0px auto;
+    margin: 0px auto 80px auto;
     background-color: #0000006c;
 }
 .admin textarea, .admin input, .admin select{
