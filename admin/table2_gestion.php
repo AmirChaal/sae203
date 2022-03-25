@@ -9,7 +9,7 @@ require 'header_admin.php';
         <h1>Gestion des données</h1>
         <hr />
         
-        <p><a href="table2_new_form.php">Ajouter une bande dessinée</a></p>
+        <p><a href="table2_new_form.php">Ajouter un auteur</a></p>
         <?php
             require '../lib_crud.inc.php';
             $co=connexionBD();
