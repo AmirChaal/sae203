@@ -6,13 +6,13 @@ DirectoryIndex admin.php
 SetEnv PHP_VALUE "display_errors = Off"
 RewriteEngine On
 RewriteRule productions /var/www/sae203/admin/table1_gestion.php
-RewriteRule supprimer_production /var/www/sae203/table1_delete.php
+RewriteRule supprimer_production /var/www/sae203/admin/table1_delete.php
 RewriteRule ajout_production /var/www/sae203/admin/table1_new_form.php
 RewriteRule ajout_production_valide /var/www/sae203/admin/table1_new_valide.php
 RewriteRule modification_production /var/www/sae203/admin/table1_update_form.php
 RewriteRule modification_production_valide /var/www/sae203/admin/table1_update_valide.php
 RewriteRule auteurs /var/www/sae203/admin/table2_gestion.php
-RewriteRule supprimer_auteur /var/www/sae203/table2_delete.php
+RewriteRule supprimer_auteur /var/www/sae203/admin/table2_delete.php
 RewriteRule ajout_auteur /var/www/sae203/admin/table2_new_form.php
 RewriteRule ajout_auteur_valide /var/www/sae203/admin/table2_new_valide.php
 RewriteRule modification_auteur /var/www/sae203/admin/table2_update_form.php
